@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Gradient Dashboard</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+    h1 {
+      color: #0077cc;
+    }
+    #chart {
+      margin-top: 2rem;
+    }
+    .denied {
+      color: red;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const access = prompt("Enter passphrase:");
+    if (access !== "airSecure123") {
+      document.body.innerHTML = '<div class="denied">Access denied.</div>';
+    }
+  </script>
+
+  <h1>🌫️ Local Air Quality Dashboard</h1>
+  <p>This dashboard shows semi-private metrics from your AirGradient sensor.</p>
+
+  <div id="chart">
+    <!-- Chart will be injected here by script.js -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
